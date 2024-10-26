@@ -1,0 +1,113 @@
+.login {
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+::selection {
+  background-color: #000000; /* Gold background color */
+  color: #fff; /* Black text color */
+}
+
+.login .logo {
+  width: max(20vw, 300px);
+}
+
+.login-form {
+  background: #fff;
+  min-width: 40vw;
+  min-height: 60vh;
+  border-radius: 32px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.login-form h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.form-input {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.pass-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pass {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 90%;
+}
+
+.pass-icon {
+  cursor: pointer;
+}
+
+.form-input:focus {
+  border: none;
+  outline: 2px solid rgb(12, 132, 201);
+}
+
+.signup-btn {
+  padding: 10px;
+  color: #fff;
+  font-weight: 900;
+  background-color: #4cb9d3;
+  border: 1px solid #8eebbc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login-term {
+  display: flex;
+  gap: 10px;
+}
+
+.login-term input {
+  cursor: pointer;
+}
+
+.login-forgot {
+  text-align: center;
+}
+
+.login-toggle span {
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  position: relative;
+}
+
+@media screen and (max-width: 481px) {
+  .login .logo {
+    display: none;
+  }
+  .login {
+    flex-direction: column;
+  }
+}
