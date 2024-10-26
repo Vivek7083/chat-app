@@ -7,12 +7,12 @@ import {
 } from "firebase/firestore";
 import { assets } from "../../assets/assets";
 import { AppContext } from "../../context/AppContext";
-import "./Chatbox.css";
+import "./ChatBoxStyle.css";
 import React, { useContext, useEffect, useState } from "react";
 import { db } from "../../config/firebase";
 import { toast } from "react-toastify";
 import upload from "../../lib/upload";
-import { API_KEY, model } from '../../config/gemini';
+import { model } from '../../config/gemini';
 
 const ChatBox = () => {
   const { userData, messagesId, messages, setMessages, chatUser } =
