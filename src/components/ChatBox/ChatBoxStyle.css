@@ -38,7 +38,7 @@
     align-items: center;
     gap: 12px;
     padding: 10px 15px;
-    background: transparent;
+    background: white;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -201,7 +201,6 @@
     .chat-box{
         width: 100%;
         justify-content: center;
-        height: 90vh;
     }
     .chat-user .arrow{
         display: block;
