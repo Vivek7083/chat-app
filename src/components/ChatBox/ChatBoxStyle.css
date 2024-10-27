@@ -38,14 +38,13 @@
     align-items: center;
     gap: 12px;
     padding: 10px 15px;
-    background: #ffffff;
+    background: #007bff;
     position: absolute;
     bottom: 0;
     left: 0;
     cursor: text;
     caret-color: #312c3bce;
     right: 0;
-    width: 100%;
 }
 
 .chat-input img {
@@ -71,6 +70,7 @@
     border: none;
     outline: none;
     cursor: text;
+    width: 100%;
 }
 
 .chat-input input::placeholder {
