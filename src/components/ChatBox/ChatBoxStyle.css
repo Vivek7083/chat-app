@@ -45,6 +45,7 @@
     cursor: text;
     caret-color: #312c3bce;
     right: 0;
+    width: 100%;
 }
 
 .chat-input img {
@@ -200,7 +201,7 @@
     .chat-box{
         width: 100%;
         justify-content: center;
-        margin-top: 0;
+        height: 90vh;
     }
     .chat-user .arrow{
         display: block;
