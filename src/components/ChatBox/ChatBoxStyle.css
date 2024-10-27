@@ -201,7 +201,7 @@
     .chat-box{
         width: 100%;
         justify-content: center;
-        height: 95vh;
+        height: calc(95vh - 20px);
     }
     .chat-user .arrow{
         display: block;
