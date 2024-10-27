@@ -109,6 +109,15 @@ const ChatBox = () => {
       return hour + ':' + min + 'AM'
     }
   }
+
+  const convertMillisecondsToHoursMinutes =(ms)=> {
+      const date = new Date(ms);
+      const hours = date.getHours().toString().padStart(2, '0'); // Get hours and format
+      const minutes = date.getMinutes().toString().padStart(2, '0'); // Get minutes and format
+  
+      return `Last Seen: ${hours}:${minutes}`; // Return formatted date
+  }
+
   const handleSummary = async () => {
     let allMessages = "";
     const messageReversed = [...messages].reverse();
@@ -151,7 +160,7 @@ const ChatBox = () => {
         <img src={chatUser.userData.avatar} alt="Profile pic" />
         <p>
           {chatUser.userData.name}{" "}
-          {Date.now() - chatUser.userData.lastSeen <= 70000 ? <img src={assets.greenDot} className="dot" alt="online status" /> : null}
+          {Date.now() - chatUser.userData.lastSeen <= 70000 ? <img src={assets.greenDot} className="dot" alt="online status" /> :<span className="last-seen">{convertMillisecondsToHoursMinutes(chatUser.userData.lastSeen)}</span> }
 
         </p>
         <img src={assets.info} className="help" alt="" width={10} />

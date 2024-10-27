@@ -186,3 +186,8 @@
 .modal-close-btn:hover {
     background-color: #0056b3;
 }
+
+.last-seen{
+    font-size: 10px;
+    opacity: 0.8;
+}
