@@ -38,7 +38,7 @@
     align-items: center;
     gap: 12px;
     padding: 10px 15px;
-    background: #007bff;
+    background: transparent;
     position: absolute;
     bottom: 0;
     left: 0;
