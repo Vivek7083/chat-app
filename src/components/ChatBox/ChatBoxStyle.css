@@ -191,3 +191,21 @@
     font-size: 10px;
     opacity: 0.8;
 }
+
+.chat-user .arrow{
+    display: none;
+}
+
+@media (max-width: 900px){
+    .chat-box{
+        width: 100%;
+        justify-content: center;
+        margin-top: 0;
+    }
+    .chat-user .arrow{
+        display: block;
+    }
+    .chat-user .help {
+        display: none;
+    }
+}

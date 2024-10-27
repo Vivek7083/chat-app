@@ -1,5 +1,5 @@
 .ls {
-  background: #312c3b; /* fallback for old browsers */
+  background: #312c3b;
   color: #a1a194;
   height: 95vh;
 }
@@ -22,7 +22,6 @@
 
 .ls-nav .logo {
   max-width: 200px;
-  max-height: auto;
 }
 
 .ls-nav .menu .menu-icon {
@@ -31,37 +30,40 @@
   cursor: pointer;
 }
 
-.ls-nav .menu{
-    position: relative;
-    padding: 10px 0;
+.ls-nav .menu {
+  position: relative;
+  padding: 10px 0;
 }
 
-.ls-nav .menu .submenu{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 130px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #d3cce3;
-    color: black;
-    display: none;
+.ls-nav .menu .submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 130px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #d3cce3;
+  color: black;
+}
+
+.submenu.hide{
+  display: none;
+}
+
+.submenu.show {
+  display: block;
 }
 
 .submenu hr {
-    border: none;
-    height: 1px;
-    background-color: #a4a4a4;
-    margin: 8px 0px;
+  border: none;
+  height: 1px;
+  background-color: #a4a4a4;
+  margin: 8px 0;
 }
 
-.submenu p{
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.menu:hover .submenu{
-    display: block;
+.submenu p {
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .ls-search {
@@ -154,4 +156,11 @@
 
 .friends.border div span{
   color: rgb(36, 206, 36);
+}
+
+
+@media (max-width: 900px) {
+  .ls {
+    width: 100%;
+  }
 }

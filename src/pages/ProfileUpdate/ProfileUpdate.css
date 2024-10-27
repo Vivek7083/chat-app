@@ -62,8 +62,8 @@
 
 .profile label img {
   width: 50px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
+  height: auto;
+  border-radius: 30%;
 }
 
 .profile form input,
@@ -87,4 +87,18 @@
   border: 1px solid #8eebbc;
   border-radius: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .profile-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .profile-container .logo {
+    width: 80px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 12px;
+  }
 }

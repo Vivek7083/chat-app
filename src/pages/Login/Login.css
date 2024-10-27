@@ -16,7 +16,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly; /* Center the content */
+  padding: 0 20px; /* Add some padding for smaller screens */
 }
 
 ::selection {
@@ -26,20 +27,24 @@
 
 .login .logo {
   width: max(20vw, 300px);
+  margin-bottom: 20px; /* Add margin for spacing */
 }
 
 .login-form {
   background: #fff;
-  min-width: 40vw;
-  min-height: 60vh;
+  width: 100%; /* Allow full width until max-width */
+  max-width: 400px; /* Maximum width */
   border-radius: 32px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for aesthetics */
 }
+
 .login-form h2 {
+  width: 100%;
   text-align: center;
   font-size: 32px;
   font-weight: bold;
@@ -103,11 +108,16 @@
   position: relative;
 }
 
-@media screen and (max-width: 481px) {
-  .login .logo {
-    display: none;
-  }
+@media screen and (max-width: 768px) {
   .login {
     flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+  }
+  
+  .login-form {
+    width: 90%; /* Allow more width on smaller screens */
+    max-width: 400px; /* Keep max width */
   }
 }

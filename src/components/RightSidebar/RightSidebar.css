@@ -137,3 +137,9 @@
 .rs button:hover {
     opacity: 1;
 }
+
+@media (max-width: 900px) {
+    .rs {
+        display: none;
+    }
+}

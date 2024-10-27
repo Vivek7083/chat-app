@@ -18,3 +18,12 @@
   display: grid;
   grid-template-columns: 1fr 2.3fr 0.9fr;
 }
+
+@media (max-width: 900px) {
+  .chat-container {
+    display: flex;
+  }
+  .loading {
+    font-size: 30px;
+  }
+}

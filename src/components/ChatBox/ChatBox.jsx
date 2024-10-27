@@ -15,7 +15,7 @@ import upload from "../../lib/upload";
 import { model } from '../../config/gemini';
 
 const ChatBox = () => {
-  const { userData, messagesId, messages, setMessages, chatUser } =
+  const { userData, messagesId, messages, setMessages, chatUser, chatVisible, setChatVisible} =
     useContext(AppContext);
 
   const [input, setInput] = useState("");
@@ -155,7 +155,7 @@ const ChatBox = () => {
   }, [messagesId]);
 
   return chatUser ? (
-    <div className="chat-box">
+    <div className={`chat-box ${chatVisible ? "": "hidden"}`}>
       <div className="chat-user">
         <img src={chatUser.userData.avatar} alt="Profile pic" />
         <p>
@@ -164,6 +164,9 @@ const ChatBox = () => {
 
         </p>
         <img src={assets.info} className="help" alt="" width={10} />
+        <img src={assets.arrow} alt="arrow-back" className="arrow" onClick={(e)=>{
+          setChatVisible(false);
+        }}/>
       </div>
       <div className="chat-msg">
         {messages.map((msg, index) => {
@@ -239,7 +242,7 @@ const ChatBox = () => {
       )}
     </div>
   ) : (
-    <div className="chat-welcome">
+    <div className={`chat-welcome ${chatVisible ? "": "hidden"}`}>
       <img src={assets.chad} alt="" />
       <h2>Chat Anytime | Anywhere</h2>
     </div>
